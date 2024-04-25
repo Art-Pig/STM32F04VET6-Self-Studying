@@ -19,7 +19,7 @@ I will share my studying  of  STM32F04VET6.
 
 软件的激活，直接上网搜索（搜索关键字“Keil5 MDK的激活”），添加许可证前，一定要以管理员身份运行
 
-###2.芯片包的导入Keil
+### 2.芯片包的导入Keil
 
 **方法一：软件导入**（科学上网，网速快）
 
@@ -90,7 +90,7 @@ Project 文件夹下面有两个文件夹。顾名思义，STM32F4xx_StdPeriph_E
 
 ![image](https://github.com/Art-Pig/STM32F04VET6-Self-Studying/assets/121549293/8e28068e-72e0-4627-b47e-6a2d91d6d495)
 
-# 第二章keil 创建新工程
+#  第二章keil 创建新工程
 
 
 
@@ -99,7 +99,7 @@ Project 文件夹下面有两个文件夹。顾名思义，STM32F4xx_StdPeriph_E
 
 为了创建基于STM32F407的keil新建工程，我前期遇到不少问题就此分享
 
-##问题1.固件库缺少源文件
+## 问题1.固件库缺少源文件
 
 按照B站大佬“江协科技”新建keil文件的教程所遇到的问题
 
@@ -141,7 +141,7 @@ B站大佬教程视频截图
 
 
 
-##问题2.官方keil工程模板过于复杂
+## 问题2.官方keil工程模板过于复杂
 
 stm32官方所提供的keil工程模板过于复杂不利于新手
 
@@ -150,7 +150,7 @@ stm32官方所提供的keil工程模板过于复杂不利于新手
 
 
 
-##最为推荐的方法
+## 最为推荐的方法
 
 
 我找了一下午终于找到一个非常好的教程
@@ -188,7 +188,7 @@ stm32官方所提供的keil工程模板过于复杂不利于新手
 
 
 
-##问题3.下载的keil里的 Arm Compiler 只有 6 vision
+## 问题3.下载的keil里的 Arm Compiler 只有 6 vision
 
 
 下载地址：[https://developer.arm.com/downloads/view/ACOMP5](https://developer.arm.com/downloads/view/ACOMP5)
