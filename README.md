@@ -90,6 +90,217 @@ Project 文件夹下面有两个文件夹。顾名思义，STM32F4xx_StdPeriph_E
 
 ![image](https://github.com/Art-Pig/STM32F04VET6-Self-Studying/assets/121549293/8e28068e-72e0-4627-b47e-6a2d91d6d495)
 
+# 第二章keil 创建新工程
+
+
+
+关于keil安装包与stm32固件包的下载可以看我写的笔记第一章
+[https://blog.csdn.net/2302_76783933/article/details/137752785?spm=1001.2014.3001.5502](https://blog.csdn.net/2302_76783933/article/details/137752785?spm=1001.2014.3001.5502)
+
+为了创建基于STM32F407的keil新建工程，我前期遇到不少问题就此分享
+
+##问题1.固件库缺少源文件
+
+按照B站大佬“江协科技”新建keil文件的教程所遇到的问题
+
+B站大佬教程视频截图
+
+
+
+
+
+再看看我们下载的官方固件库（以STM32Fxxx为例）
+
+根本就没有后缀名为 **.mds文件**
+
+
+
+
+
+
+
+
+
+文件夹路径：STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm
+
+
+
+
+
+虽然有core_cm4.h文件,但却**没有core_cm4.c文件**
+
+
+
+
+
+
+
+文件名路径：D:\Stugying of stm32\stm32f40xxx标准库最新版\en.stsw-stm32065_v1-9-0\STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries\CMSIS\Include
+
+
+
+
+
+##问题2.官方keil工程模板过于复杂
+
+stm32官方所提供的keil工程模板过于复杂不利于新手
+
+
+官方模板截图，有众多的文件占用内存，前期学习根本用不到那么多函数，即使成功生成.hex文件，但警告特别多，新手难以看得懂
+
+
+
+##最为推荐的方法
+
+
+我找了一下午终于找到一个非常好的教程
+
+教程链接：[kiel模板教程](https://blog.csdn.net/Yun_yichen/article/details/133233425?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522171335237716800227415362%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=171335237716800227415362&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-2-133233425-null-null.142^v100^pc_search_result_base6&utm_term=stm32f407vet6&spm=1018.2226.3001.4187)
+
+
+不过我在跟着大佬教程时有遇到一些问题，就是我的stm32f4xx.h文件内容与大佬的内容不同
+
+
+
+
+
+
+不过也没关系，直接将`STM32F40_41xxx,USE_STDPERIPH_DRIVER`拷贝过去就好了
+
+
+
+
+
+
+在补充一下大佬没讲的，记得将这里的魔法棒里的Target里的Arm Compiler 改成 5 vision 或者 5.06版本
+
+
+
+
+最后点一下编译，0错误、0警告
+
+注意main.c文件里的程序最后要空一行
+
+
+
+
+
+
+
+
+##问题3.下载的keil里的 Arm Compiler 只有 6 vision
+
+
+下载地址：[https://developer.arm.com/downloads/view/ACOMP5](https://developer.arm.com/downloads/view/ACOMP5)
+
+安装教程：点击三个方块，再点击Foder，再点击Arm Compiler那栏的三个点
+
+
+
+
+
+
+
+点击Add another Arm Compiler ,然后找到刚刚下载好的Arm Compiler文件导进去
+
+
+
+
+
+
+
+----------
+<a name="2.芯片包导入keil"></a>
+    
+
+
+
+## 第三章 正式操作STN32F07系列芯片
+
+<font color=red>注意:以下均以STM32F407VET6为例</font>
+
+### 一、点亮LED灯
+
+复制粘贴我们的**新建工程模板**
+
+我这边找到一个作者开源的STM32F407VET6文件
+
+[Github网址：](https://github.com/Apex-yuan/STM32F407_StudyNotes.git)
+
+点击绿色的Code
+
+点击download zip
+
+打开下载好的文件
+
+打开program
+
+打开新建工程模板
+
+复制新建工程模板复制
+
+创建新文件夹led_test
+
+粘贴新建工程模板到文件夹led_test
+
+#### 1.GPIO
+
+**文档链接**，文档手册
+
+GPIO口寄存器,就是端口，看这一段就好了
+
+**我们需要学会去看代码**
+
+教大家怎么看keil工程文件
+
+源代码呀，头文件呀
+
+使能，初始化，在同一个寄存器可以使用与或
+
+
+#### 2.RCC时钟
+
+电源复位
+
+RCC的作用，为什么启动单片机就会用到RCC
+
+
+
+#### 3.调试
+
+Fly MCU的使用方法
+
+以及如何根据原理图来判断板子的烧录方式
+
+这个很重要
+
+ST-Link 啊，J-Link啊
+
+
+我所遇到的错误五
+
+
+至于Stm32F07，我先发一下
+
+
+不要拘泥，不要被局限
+
+转化思路
+
+
+买个F103开始学江科大
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 You
